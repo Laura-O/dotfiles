@@ -1,0 +1,5 @@
+[user]
+	name = Laura Ohrndorf
+	email = laura.ohrndorf@gmail.com
+[core]
+	excludesfile = /Users/lohrndorf/.gitignore_global
