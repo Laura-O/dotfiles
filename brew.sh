@@ -22,12 +22,13 @@ brew install python
 brew install python3
 brew install zsh
 
+brew tap caskroom/fonts   
+brew cask install font-hack-nerd-font
 
 brew cask install alfred
 brew cask install caffeine
 brew cask install dropbox
 brew cask install flash
-brew cask install font-hack-nerd-font
 brew cask install google-chrome
 brew cask install gpgtools
 brew cask install iterm2
