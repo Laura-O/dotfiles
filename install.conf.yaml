@@ -6,6 +6,7 @@
 - clean: ['~', '~/.config']
 
 - link:
+    ~/.i3: i3
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
