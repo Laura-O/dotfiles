@@ -17,7 +17,8 @@ set cursorline
 set encoding=utf8
 
 " new leader
-let mapleader = ","
+let mapleader = ','
+let maplocalleader = ',,'
 
 " smarter tabs
 set smarttab
@@ -29,6 +30,9 @@ set tabstop=4
 " no sound
 set noerrorbells
 set novisualbell
+
+" show commands
+set showcmd
 
 filetype off
 
@@ -48,6 +52,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'ryanoasis/vim-devicons'
 
 " All Plugins before this line
