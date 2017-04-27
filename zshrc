@@ -56,7 +56,7 @@ plugins=(git osx python lol brew)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+PATH="$PATH:/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment

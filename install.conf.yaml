@@ -9,8 +9,10 @@
     ~/.i3: i3
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
+    ~/.todo/config: todo
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
+
 
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]

@@ -3,3 +3,4 @@
 	email = laura.ohrndorf@gmail.com
 [core]
 	excludesfile = /Users/lohrndorf/.gitignore_global
+	editor = /usr/bin/vim

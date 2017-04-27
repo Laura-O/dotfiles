@@ -34,6 +34,12 @@ set novisualbell
 " show commands
 set showcmd
 
+" no arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -54,6 +60,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'freitass/todo.txt-vim'
 
 " All Plugins before this line
 call vundle#end()
