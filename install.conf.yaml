@@ -6,7 +6,10 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.i3: i3
+    ~/.config/i3/config: config/i3/config
+    ~/.config/compton.conf: config/compton.conf
+    ~/.config/polybar: config/polybar
+    ~/.config/termite: config/termite
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.todo/config: todo

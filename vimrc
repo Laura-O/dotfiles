@@ -53,14 +53,12 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'godlygeek/tabular'
-Plugin 'mhinz/vim-startify'
 Plugin 'tpope/vim-surround'	
 Plugin 'sheerun/vim-polyglot'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'flazz/vim-colorschemes'
 
 " All Plugins before this line
 call vundle#end()
@@ -88,3 +86,7 @@ let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 0
 set encoding=utf-8
 set guifont=Inconsolata\ for\ Powerline:h11
+
+" colorscheme
+colorscheme molokai
+
