@@ -15,8 +15,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 ## Linux
 ### Switch off caps lock & map to Escape
+```
 xmodmap -e "clear lock"
 xmodmap -e "keysym Caps_Lock = Escape"
+```
 
 ## Mac
 Map keys with Karabiner:
