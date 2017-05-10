@@ -13,7 +13,7 @@ foreground = #c4b7c5
 ;primary = #00ff54
 
 
-primary = #876587
+primary = #8E1E9C
 alert = #553344
 
 [bar/top]
