@@ -1,6 +1,6 @@
 # My dotfiles
 
-![](images/screnshot1.png)
+![](images/screenshot1.png)
 
 ![](images/screenshot2.png)
 
