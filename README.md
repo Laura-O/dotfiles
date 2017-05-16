@@ -1,5 +1,9 @@
 # My dotfiles
 
+![](images/screnshot1.png)
+
+![](images/screenshot2.png)
+
 ## General
 
 ### Vundle

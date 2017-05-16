@@ -11,8 +11,8 @@
 
 set $mod Mod4
 
-set $default_gaps_inner 5
-set $default_gaps_outer 2
+set $default_gaps_inner 1
+set $default_gaps_outer 1
 
 # == SETTINGS ==
 # ==============
@@ -73,6 +73,7 @@ bindsym $mod+Tab exec --no-startup-id rofi -hide-scrollbar -show window
 
 # Screenshot
 bindsym --release $mod+z exec scrot -s
+bindsym Print exec scrot 'Bildschirmfoto_%Y-%m-%d.png' 
 
 # change focus
 bindsym $mod+j focus left

@@ -10,9 +10,6 @@
 [colors]
 background = #e5000000
 foreground = #c4b7c5
-;primary = #00ff54
-
-
 primary = #8E1E9C
 alert = #553344
 
@@ -40,12 +37,8 @@ module-margin-right = 1
 
 font-0 = InconsolataGo:size=10
 font-1 = FontAwesome:pixelsize=10;2
-
-; superscript - for ws index - %{T3}
 font-2 = Abyssinica SIL:fontformat=truetype:size=6;-2
-; subscript icons - %{T4}
 font-3 = FontAwesome:pixelsize=10;2
-
 font-4 = DejaVu Sans:fontformat=truetype:size=10;1
 
 modules-left = i3
@@ -82,11 +75,11 @@ pin-workspaces = true
 
 ws-icon-0 = 1;
 ws-icon-1 = 2;
-ws-icon-2 = 3;
+ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5:chat;
+ws-icon-4 = 5:
 ws-icon-5 = 6;
-ws-icon-6 = 
+ws-icon-6 = 7;
 ws-icon-7 = 8; 
 ws-icon-8 = 9;
 ws-icon-9 = 10:
