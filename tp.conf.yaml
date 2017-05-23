@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/i3/config: config/tp/i3/config
+    ~/.config/compton.conf: config/tp/compton.conf
+    ~/.config/polybar: config/tp/polybar
+
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]
