@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/termite: config/termite
+    ~/.gitconfig: gitconfig
+    ~/.tmux.conf: tmux.conf
+    ~/.todo/config: todo
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+
+
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]
