@@ -8,8 +8,8 @@
 ;=====================================================
 
 [colors]
-background = #173350
-foreground = #acc5f0
+background = #222838
+foreground = #b5cede
 primary = #5f99d5
 alert = #553344
 
@@ -18,28 +18,27 @@ monitor =  ${env:MONITOR:HDMI1}
 width = 100%
 height = 20
 radius = 0.0
-fixed-center = true
+fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
+line-size = 2
 line-color = ${colors.primary}
 
-border-size = 0
+border-size = 2
 border-color = ${colors.background}
 
 padding-left = 0
-padding-right = 0
+padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = InconsolataGo:size=10
-font-1 = FontAwesome:pixelsize=10;2
-font-2 = Abyssinica SIL:fontformat=truetype:size=6;-2
-font-3 = FontAwesome:pixelsize=10;2
-font-4 = DejaVu Sans:fontformat=truetype:size=10;1
+font-0 = InconsolataGo:fontformat=truetype:size=10;2
+font-1 = FontAwesome:fontformat=truetype:size=10;2
+font-2 = WunconSiji:pixelsize=10;0
+
 
 modules-left = i3
 modules-center = xwindow
@@ -47,13 +46,13 @@ modules-right = wlan volume cpu memory date powermenu
 
 ; no tray
 tray-position = right
-tray-padding = 5
+tray-padding = 2
 tray-background=${root.background}
 
 [module/xwindow]
 type = internal/xwindow
-format-underline = #00000000
-format-foreground = ${colors.primary}
+;format-underline = #00000000
+;format-foreground = ${colors.primary}
 label = %title:0:75:...%
 
 [module/filesystem]
@@ -120,17 +119,26 @@ label-urgent-padding = 1
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-underline = ${colors.primary}
-label = %percentage%%
+label =  %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-underline = ${colors.primary}
 format = <label>
-label = "%percentage_used%%"
+label = %percentage_used%%
+
+[module/pkg]
+type = custom/script
+interval = 1200
+format = <label>
+format-underline = #dc322f
+label = "%output:0:30%"
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/wlan]
 type = internal/network
@@ -163,11 +171,38 @@ label = %date% %time%
 [module/volume]
 type = internal/volume
 
-label-volume = " %percentage%%"
-label-volume-foreground = ${root.foreground}
-label-volume-underline = ${colors.primary}
-label-muted =  0%
-label-muted-underline = ${colors.primary}
+#label-volume = " %percentage%%"
+#label-volume-foreground = ${root.foreground}
+#label-volume-underline = ${colors.primary}
+#label-muted =  0%
+#label-muted-underline = ${colors.primary}
+
+format-volume = <label-volume> <bar-volume>
+label-volume =  
+label-volume-foreground = ${colors.foreground}
+
+format-muted-prefix =   
+format-muted-foreground = ${colors.foreground}
+label-muted = muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #aaacbb
+bar-volume-foreground-1 = #aaacbb
+bar-volume-foreground-2 = #aaacbb
+bar-volume-foreground-3 = #707190
+bar-volume-foreground-4 = #707190
+bar-volume-foreground-5 = #555976
+bar-volume-foreground-6 = #555976
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground}
+
+
 
 [module/battery]
 poll-interval = 2
@@ -244,8 +279,7 @@ throttle-output-for = 10
 type = custom/menu
 
 label-open =   
-
-label-close = cancel
+label-close =  cancel
 
 label-close-background = #312842
 label-close-foreground = #ffeefc
@@ -254,7 +288,7 @@ label-open-padding-right = 3
 label-close-padding = 3
 
 menu-0-0 = lock
-menu-0-0-exec = ~/scripts/lock.sh
+menu-0-0-exec = ~/.config/i3/locker.sh
 menu-0-0-background = #312842
 menu-0-0-foreground = #c05c47
 menu-0-0-padding-right = 3
@@ -292,5 +326,5 @@ label = "%output:0:75:...%"
 format-underline = ${colors.primary}
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+margin-top = 5
+margin-bottom = 5
