@@ -194,7 +194,8 @@ bindsym $mod+r mode "resize"
 
 # assign sections
 assign [title="Google Chrome"]		$ws2
-assign [title="atom"]				$ws3
+assign [title="Atom"]				$ws3
+assign [title="Pcmanfm"]			$ws4
 assign [title="ScudCloud"]			$ws9
 assign [title="Steam"]				$ws10
 
@@ -209,6 +210,9 @@ for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
 for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
 for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [title="^Steam Keyboard$"] floating enable
+
+#for_window [instance="pcmanfm" class="Pcmanfm"] floating enable
+#for_window [instance="termite" class="Termite"] floating enable
 
 # Sound buttons
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
@@ -232,3 +236,4 @@ exec_always --no-startup-id xfce4-power-manager
 
 exec --no-startup-id termite
 exec --no-startup-id google-chrome-stable
+exec --no-startup-id pcmanfm
