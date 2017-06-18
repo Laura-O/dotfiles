@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -52,7 +54,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx python lol brew)
+plugins=(git python npm lol)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,7 +63,7 @@ PATH="$PATH:/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=de_DE.UTF-8
+export LANG="de_DE.UTF-8"
 export LC_MESSAGES="C"
 
 # Preferred editor for local and remote sessions
@@ -93,8 +95,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #    source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 #fi
 
-
 source "/home/laura/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
-
-source "/home/laura/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
