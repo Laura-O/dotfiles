@@ -46,10 +46,12 @@ set_from_resource $fg = #acc5f0
 # == COLORS ==
 # ============
 
+set $focused        #73E5FF
+
 # class                  border  backgr. text indicator child_border
-client.focused          #C85951    $bg     $fg  $bg       $bg
-client.focused_inactive #C85951    $bg     $fg  $bg       $bg
-client.unfocused        #FFF8E7    $bg     $fg  $bg       $bg
+client.focused          $color1    $bg     $fg  $bg       $bg
+client.focused_inactive #181818    $bg     $fg  $bg       $bg
+client.unfocused        #181818    $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
@@ -196,7 +198,7 @@ bindsym $mod+r mode "resize"
 assign [title="Google Chrome"]		$ws2
 assign [title="Atom"]				$ws3
 assign [title="Pcmanfm"]			$ws4
-assign [title="ScudCloud"]			$ws9
+assign [title="Slack"]				$ws9
 assign [title="Steam"]				$ws10
 
 # https://github.com/ValveSoftware/steam-for-linux/issues/1040
@@ -233,7 +235,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst -config ~/.config/dunst/config
 exec --no-startup-id nm-applet
 exec_always --no-startup-id xfce4-power-manager
+#exec --no-startup-id conky -c /home/adien/.config/i3/conkyrc
 
 exec --no-startup-id termite
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id pcmanfm
+exec --no-startup-id atom
+exec --no-startup-id slack

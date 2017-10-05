@@ -9,15 +9,17 @@
 
 [colors]
 background = #222838
-foreground = #b5cede
-primary = #5f99d5
+#foreground = #b5cede
+foreground = #F078ED
+#primary = #5f99d5
+primary = #3fc0ef
 alert = #553344
 
 [bar/top]
 monitor =  ${env:MONITOR:HDMI1}
 width = 100%
 height = 20
-radius = 0.0
+radius = 1.0
 fixed-center = false
 
 background = ${colors.background}
@@ -77,10 +79,10 @@ ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;
 ws-icon-3 = 4;
-ws-icon-4 = 5:
+ws-icon-4 = 5:
 ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8; 
+ws-icon-6 = 7;
+ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10:
 
